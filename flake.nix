@@ -10,11 +10,8 @@
     self,
     nixpkgs,
     ...
-  }: let
-    systems = import inputs.systems;
-  in
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = systems;
+  }: flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = import inputs.systems;
       perSystem = {
         config,
         self',
