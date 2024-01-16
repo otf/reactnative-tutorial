@@ -23,6 +23,9 @@
         ...
       }: {
         devShells.default = pkgs.mkShell {
+          packages = [
+            pkgs.nodePackages.typescript-language-server
+          ];
           nativeBuildInputs = [
             pkgs.nodejs_21
             pkgs.nodePackages.npm
