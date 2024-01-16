@@ -1,18 +1,10 @@
 import React from 'react';
 import {Text, TextInput, View} from 'react-native';
 
-const Cat = () => {
+const Cat = props => {
   return (
     <View>
-      <Text>Hello, I am...</Text>
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-        }}
-        defaultValue="Name me!"
-      />
+      <Text>Hello, I am {props.name}!</Text>
     </View>
   );
 };
@@ -21,9 +13,9 @@ const Cafe = () => {
   return (
     <View>
       <Text>Welcome!</Text>
-      <Cat/>
-      <Cat/>
-      <Cat/>
+      <Cat name="Maru"/>
+      <Cat name="Jellylorum"/>
+      <Cat name="Spot"/>
     </View>
   );
 };
