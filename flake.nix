@@ -11,7 +11,8 @@
     self,
     nixpkgs,
     ...
-  }: flake-parts.lib.mkFlake {inherit inputs;} {
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
         inputs.treefmt-nix.flakeModule
       ];
